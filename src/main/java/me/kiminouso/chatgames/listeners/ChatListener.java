@@ -34,7 +34,7 @@ public class ChatListener implements Listener {
         }
 
         for (Player player : Bukkit.getOnlinePlayers()) {
-            if (player.hasPermission("chatgames.bypass"))
+            if (!player.hasPermission("chatgames.see"))
                 return;
 
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', message));

@@ -36,7 +36,7 @@ public class ChatGameTask {
 
         String msg = ChatGames.getPlugin(ChatGames.class).getConfig().getString("messages." + configValue).replace("{0}", question);
         Bukkit.getOnlinePlayers().forEach(player -> {
-            if (player.hasPermission("chatgames.bypass"))
+            if (!player.hasPermission("chatgames.see"))
                 return;
 
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', msg));

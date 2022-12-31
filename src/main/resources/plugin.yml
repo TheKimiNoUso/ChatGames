@@ -19,15 +19,6 @@ permissions:
   chatgames.use:
     default: true
     description: Gives access to the /chatgames base command
-  chatgames.reload:
-    default: op
-    description: Gives access to reload the configuration
-  chatgames.toggle:
-    default: op
-    description: Gives access to toggle chat games globally
-  chatgames.setdelay:
-    default: op
-    description: Gives access to change the delay for automated chat games
-  chatgames.top:
+  chatgames.see:
     default: true
-    description: Gives access to view the top 3 chat game players
+    description: Gives access to see ongoing chat games
