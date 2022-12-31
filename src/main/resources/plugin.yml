@@ -3,6 +3,7 @@ version: '${project.version}'
 main: me.kiminouso.chatgames.ChatGames
 api-version: 1.17
 prefix: ChatGames
+softdepend: [ PlaceholderAPI ]
 authors: [ KimiNoUso ]
 description: A cool chat games plugin
 
