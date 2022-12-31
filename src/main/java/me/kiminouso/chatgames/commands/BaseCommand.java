@@ -14,6 +14,7 @@ public class BaseCommand extends TippieCommand {
         super.getSubCommands().add(new TopCommand());
         super.getSubCommands().add(new ReloadCommand());
         super.getSubCommands().add(new SetDelayCommand());
+        super.getSubCommands().add(new ToggleCommand());
     }
 
     @Override

@@ -7,6 +7,7 @@ import me.kiminouso.chatgames.listeners.JoinListener;
 import me.kiminouso.chatgames.utils.ChatGameTask;
 import me.kiminouso.chatgames.utils.Metrics;
 import org.bukkit.Bukkit;
+import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.util.io.BukkitObjectInputStream;
 
@@ -33,6 +34,18 @@ public final class ChatGames extends JavaPlugin {
 
         if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null)
             new Placeholders(this).register();
+    }
+
+    public void toggleChatGames(CommandSender sender) {
+        if (getConfig().getBoolean("settings.auto-start")) {
+            getConfig().set("settings.auto-start", false);
+            sender.sendMessage("§cDisabling ChatGames");
+        } else {
+            getConfig().set("settings.auto-start", true);
+            sender.sendMessage("§aEnabling ChatGames");
+        }
+        saveConfig();
+        chatGame.load();
     }
 
     @Override
