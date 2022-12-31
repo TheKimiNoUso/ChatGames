@@ -16,6 +16,11 @@ public class ChatGameTask {
     private int cooldown;
 
     private final Runnable task = () -> {
+        if (ChatGames.getPlugin(ChatGames.class).getChatGame().getGames().isEmpty()) {
+            ChatGames.getPlugin(ChatGames.class).getChatGame().load();
+            return;
+        }
+
         ChatGame.Game currentGame = ChatGames.getPlugin(ChatGames.class).getChatGame().getGames().get(0);
         ChatGames.getPlugin(ChatGames.class).getChatGame().currentGame.clear();
         ChatGames.getPlugin(ChatGames.class).getChatGame().getGames().remove(currentGame);
