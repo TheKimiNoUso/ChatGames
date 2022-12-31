@@ -1,0 +1,33 @@
+name: ChatGames
+version: '${project.version}'
+main: me.kiminouso.chatgames.ChatGames
+api-version: 1.17
+prefix: ChatGames
+authors: [ KimiNoUso ]
+description: A cool chat games plugin
+
+commands:
+  chatgames:
+    permission: chatgames.use
+    description: Base command
+    aliases:
+      - cg
+      - chatgame
+      - cgames
+
+permissions:
+  chatgames.use:
+    default: true
+    description: Gives access to the /chatgames base command
+  chatgames.reload:
+    default: op
+    description: Gives access to reload the configuration
+  chatgames.toggle:
+    default: op
+    description: Gives access to toggle chat games globally
+  chatgames.setdelay:
+    default: op
+    description: Gives access to change the delay for automated chat games
+  chatgames.top:
+    default: true
+    description: Gives access to view the top 3 chat game players

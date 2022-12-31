@@ -1,0 +1,49 @@
+# Thank you for downloading ChatGames. If you like my plugin, please leave a rating!
+# https://www.spigotmc.org/threads/chatgames.583585/
+
+# Timer is done in minutes!
+settings:
+  enable-rewards: true
+  auto-start: true
+  player-requirement:
+    enable: false
+    threshold: 2
+  timer: 1
+
+messages:
+  win: "&a{player} has won a Chat Game in {time}s! The answer was {0}"
+  wins: "&aYou have {0} wins!"
+  unscramble: "&6Unscramble the following word: {0}"
+  math: "&6What is {0}?"
+  reverse: "&6Reverse the following word: {0}"
+  top:
+    header: "&8[&eChatGame&8]&e Top ChatGame Wins"
+    entry: "&7 - &e{0}&f has &e{1}&f wins"
+
+games:
+  math:
+    enable: true
+    reward: "eco give {player} 100"
+    limits:
+      subtraction: 5
+      division: 5
+      multiplication: 5
+      addition: 5
+  scramble:
+    enable: true
+    reward: "eco give {player} 100"
+    words:
+      - Diamond
+      - Gold
+      - Iron
+      - Netherite
+      - Coal
+  reverse:
+    enable: true
+    reward: "eco give {player} 100"
+    words:
+      - Diamond
+      - Gold
+      - Iron
+      - Netherite
+      - Coal
